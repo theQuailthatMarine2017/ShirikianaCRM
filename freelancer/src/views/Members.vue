@@ -42,7 +42,7 @@
 
                  <q-input filled v-model="email_member" label="Member Email *" lazy-rules />
 
-                 <q-select filled v-model="taskmember" :options="members" label="Select Member for Task *" />
+                 <q-select filled v-model="title_member" :options="members" label="Member Title *" />
 
                  <q-input filled v-model="mobile_member" label="Member Mobile *" lazy-rules />
 
@@ -104,6 +104,7 @@ export default {
       client_mail:'',
             client_phone: '',
       account_member:'',
+      title_member:'',
       project_client:'',
       name_member:'',
             email_member: '',
