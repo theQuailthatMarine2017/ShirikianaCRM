@@ -6,18 +6,19 @@
                 inline
                 :options="[
                 { label: 'Create Payments', value: 'member_payment' },
-                { label: 'Confirm Payments', value: 'confirm_payments' }
+                { label: 'Manage Payments', value: 'manage_payments' }
                 ]"
             />
             <div class="create-pd">
                 <q-tab-panels v-model="panel" animated class="shadow-2 rounded-borders">
+
                     <q-tab-panel name="member_payment">
                         <div class="text-h6">Team Member Payment
                         </div>
 
                         <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
 
-                           <q-select filled v-model="title_member" :options="members" label="Select Member To Pay *" />
+                           <q-select filled v-model="member" :options="members" label="Select Member To Pay *" />
 
                             <q-input filled v-model="price" label="Payment Amount *" mask="#.##" fill-mask="0" reverse-fill-mask input-class="text-right" />
 
@@ -26,6 +27,18 @@
                         <q-btn label="Clear" type="reset" color="primary" flat class="q-ml-sm" />
                     </div>
                     </q-form>
+
+                    </q-tab-panel>
+
+                    <q-tab-panel name="manage_payments">
+                        <q-table :data="data2" title="Payments Pending" row-key="member_name" :columns="columns2" selection="single" :selected.sync="selected"/>
+
+                            <div :disabled="!selected.length > 0" class="tb-btn">
+                                <q-btn label="Confirm Payment" type="submit" color="blue"/>
+                                <q-btn label="Reject Payment" type="reset" color="red" class="q-ml-sm" />
+                            </div>
+
+                        <q-table :data="data" title="Completed Payments" :columns="columns" />
 
                     </q-tab-panel>
                     
@@ -42,9 +55,45 @@ export default {
     data() {
         return {
             members:['Member 1', 'Member 2', 'Member 3'],
+            member:'',
             selected:[],
-            panel:'member_payment'
+            panel:'member_payment',
+            columns2:[
+	        { name: 'name', align: 'left', label: 'Member Name', field: 'member_name', sortable: true },
+	        { name: 'project', align: 'left', label: 'Payment Amount', field: 'payment_amount', sortable: true }
+            ],
+            data2:[{
+                member_name:'Member1',
+                payment_amount: 3000
+            }],
+            data:[{
+         	member_name:'Member1',
+                payment_amount: 3000,
+                date_created:'12/12/20'
+         },
+         {
+         	member_name:'Member2',
+                payment_amount: 6000,
+                date_created:'13/12/20'
+         }],
+         columns:[
+	       { name: 'name', align: 'left', label: 'Member Name', field: 'member_name', sortable: true },
+            { name: 'amount', align: 'left', label: 'Payment Amount', field: 'payment_amount', sortable: true },
+            { name: 'date', align: 'left', label: 'Payment Date', field: 'date_created', sortable: true }
+         ]
         }
     },
 }
 </script>
+
+<style scoped>
+.create-pd{
+	padding:15px;
+}
+
+.tb-btn{
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+</style>

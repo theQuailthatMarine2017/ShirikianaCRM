@@ -310,21 +310,24 @@ app.post('/api/freelancer-ke/create-lead', async (req, res) => {
 
     try {
         //New Client Created
-        const tasks = new Leads({
+        const lead = new Leads({
 
-            email: req.body.title,
-            name: req.body.project,
-            mobile: req.body.members
+            email: req.body.email,
+            name: req.body.name,
+            companyName: req.body.companyName,
+            natureOfBusiness: req.body.natureOfBusiness,
+            mobile: req.body.mobile,
+            leadLevel: req.body.level
 
         });
 
-        const newtasks = await tasks.save();
+        const newlead = await lead.save();
 
-        console.log("new" + newtasks)
+        console.log("new" + newlead)
 
         res.status(200).json({
             title: 'created',
-            newtasks
+            newlead
         });
 
     } catch (err) {
@@ -335,5 +338,75 @@ app.post('/api/freelancer-ke/create-lead', async (req, res) => {
 
 
 });
+
+// create proposal
+
+app.post('/api/freelancer-ke/create-proposal', async (req, res) => {
+
+    console.log(req.body)
+
+    try {
+        //New Client Created
+        const proposal = new Proposals({
+
+            title: req.body.title,
+            lead: req.body.lead,
+            bodyText: req.body.bodyText
+
+        });
+
+        const newproposal = await proposal.save();
+
+        console.log("new" + newproposal)
+
+        res.status(200).json({
+            title: 'created',
+            newproposal
+        });
+
+    } catch (err) {
+
+        res.send(err);
+    }
+
+
+
+});
+
+// calendar events
+
+app.post('/api/freelancer-ke/create-event', async (req, res) => {
+
+    console.log(req.body)
+
+    try {
+        //New Client Created
+        const proposal = new Proposals({
+
+            title: req.body.title,
+            eventType: req.body.lead,
+            memberAttached: req.body.bodyText,
+            
+
+        });
+
+        const newproposal = await proposal.save();
+
+        console.log("new" + newproposal)
+
+        res.status(200).json({
+            title: 'created',
+            newproposal
+        });
+
+    } catch (err) {
+
+        res.send(err);
+    }
+
+
+
+});
+
 
 console.log(`app is listening on port: ${port}`)

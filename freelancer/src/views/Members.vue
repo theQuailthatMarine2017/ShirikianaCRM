@@ -136,7 +136,7 @@ export default {
          }],
          data2:[{
          	member_name:'Member1',
-            member_project: 'Freelancer',
+          member_project: 'Freelancer',
             member_account:'Accounts',
          	member_email:'member1@email.com',
          	member_mobile:'667789333'
