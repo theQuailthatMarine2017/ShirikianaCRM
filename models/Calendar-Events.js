@@ -11,12 +11,12 @@ const eventsSchema = new mongoose.Schema({
         type:Boolean
     },
     membersAttached:{
-        type:Array
+        type:Array // Array of Member ID's if event has Member Attached to true
     },
     startdate: {
-        type: Array
+        type: String
     },
-    finaldate: {
+    enddate: {
         type: Date
     },
     urgency: {
@@ -25,4 +25,4 @@ const eventsSchema = new mongoose.Schema({
 }, {timestamps: true});
 
 
-module.exports = mongoose.model('Tasks', tasksSchema);
+module.exports = mongoose.model('Events', eventsSchema);

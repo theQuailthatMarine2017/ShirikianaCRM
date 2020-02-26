@@ -7,12 +7,9 @@ const bcrypt = require('bcrypt');
 const { createaccounttoken } = require('./jwtoken');
 const Admin = require('./models/Admins');
 const Client = require('./models/Client');
-const Invoices = require('./models/Invoices');
-const Leads = require('./models/Leads');
-const Member = require('./models/Member');
-const Projects = require('./models/Projects');
-const Proposals = require('./models/Proposals');
+const Events = require('./models/Calendar-Events');
 const Receipts = require('./models/Receipts');
+const Invoices = require('./models/Invoices');
 const Settings = require('./models/Settings');
 const Tasks = require('./models/Tasks');
 var multer  = require('multer');
@@ -381,22 +378,25 @@ app.post('/api/freelancer-ke/create-event', async (req, res) => {
 
     try {
         //New Client Created
-        const proposal = new Proposals({
+        const events = new Events({
 
             title: req.body.title,
             eventType: req.body.lead,
             memberAttached: req.body.bodyText,
-            
+            membersAttached:req.body.membersAttached,
+            startdate: new Date(),
+            enddate: new Date(),
+            urgency: req.body.urgency
 
         });
 
-        const newproposal = await proposal.save();
+        const newevent = await events.save();
 
-        console.log("new" + newproposal)
+        console.log("new" + newevent)
 
         res.status(200).json({
             title: 'created',
-            newproposal
+            newevent
         });
 
     } catch (err) {
@@ -407,6 +407,43 @@ app.post('/api/freelancer-ke/create-event', async (req, res) => {
 
 
 });
+
+// create invoice
+
+app.post('/api/freelancer-ke/create-invoice', async (req, res) => {
+
+    console.log(req.body)
+
+    try {
+        //New Client Created
+        const invoice = new Invoices({
+
+            client: req.body.client,
+            cost: req.body.cost,
+            project: req.body.project,
+            filePath:req.body.filePath,
+            fileName: req.body.fileName
+
+        });
+
+        const newinvoice = await invoice.save();
+
+        console.log("new" + newinvoince)
+
+        res.status(200).json({
+            title: 'created',
+            newinvoice
+        });
+
+    } catch (err) {
+
+        res.send(err);
+    }
+
+
+
+});
+
 
 
 console.log(`app is listening on port: ${port}`)

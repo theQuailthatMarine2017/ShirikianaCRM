@@ -8,7 +8,7 @@ const tasksSchema = new mongoose.Schema({
         type:String
     },
     members: {
-        type: Array
+        type: Array // Array of Member ID's
     },
     duedate: {
         type: Date
@@ -18,6 +18,9 @@ const tasksSchema = new mongoose.Schema({
     },
     completed: {
         type: Date
+    },
+    completedOnTime:{
+        type: Boolean
     }
 }, {timestamps: true});
 

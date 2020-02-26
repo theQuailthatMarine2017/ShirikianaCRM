@@ -9,14 +9,20 @@ const memberSchema = new mongoose.Schema({
         unique:true
     },
     fullnames:{
-        type:String
+        type:String,
+        required:true
     },
-    accountType:{
+    projects:{
+        type:Array, // Array of Project Id's / Project Name
+        required:true
+    },
+    role:{
         type:String,
         required:true
     },
     password:{
-        type:String
+        type:String,
+        required:true
     }
 }, {timestamps: true});
 

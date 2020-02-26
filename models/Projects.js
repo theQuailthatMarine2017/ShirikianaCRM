@@ -12,6 +12,15 @@ const projectsSchema = new mongoose.Schema({
     budget:{
         type:Number
     },
+    targets:{
+        type:Array // Array of targets / objectives for proposed for project success.
+    },
+    targetsMet:{
+        type:Array // Array of how many of the above targets were met
+    },
+    targetsPercentage:{
+        type:Number // Percentage of targets met over total targets
+    },
     description:{
         type:String,
         max:255,
