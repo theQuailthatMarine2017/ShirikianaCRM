@@ -8,17 +8,32 @@ const memberSchema = new mongoose.Schema({
         min: 6,
         unique:true
     },
+    mobile:{
+        type: Number
+    },
     fullnames:{
         type:String,
         required:true
     },
     projects:{
-        type:Array, // Array of Project Id's / Project Name
-        required:true
+        type:Array // Array of Project Id's / Project Name
+        
     },
     role:{
         type:String,
         required:true
+    },
+    hasBankAccount:{
+        type:Boolean
+    },
+    bank:{
+        type: String
+    },
+    bankAccountNumber:{
+        type: Number
+    },
+    bankAccountName:{
+        type:String
     },
     password:{
         type:String,

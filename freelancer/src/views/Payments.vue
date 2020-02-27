@@ -18,9 +18,16 @@
 
                         <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
 
-                           <q-select filled v-model="member" :options="members" label="Select Member To Pay *" />
+                           <q-select filled v-model="payment_type" :options="methods" label="Select Payment Method *" />
 
                             <q-input filled v-model="price" label="Payment Amount *" mask="#.##" fill-mask="0" reverse-fill-mask input-class="text-right" />
+
+                            <q-input filled v-model="payment_description" label="Payment Description *"  />
+
+                            <q-input filled v-model="member_to_pay" label="Select Member For Payment *"  />
+
+                            
+
 
                     <div>
                         <q-btn label="Submit" type="submit" color="primary"/>
@@ -54,8 +61,8 @@
 export default {
     data() {
         return {
-            members:['Member 1', 'Member 2', 'Member 3'],
-            member:'',
+            methods:['Bank Transfer', 'Mobile Money'],
+            payment_type:'',
             selected:[],
             panel:'member_payment',
             columns2:[

@@ -14,8 +14,7 @@ const receiptSchema = new mongoose.Schema({
         type:String
     },
     fileName: {
-        type:String,
-        required:true
+        type:String
     }
 }, {timestamps: true});
 

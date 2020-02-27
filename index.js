@@ -31,7 +31,7 @@ app.listen(port)
 
 
 
-mongoose.connect( "mongodb://localhost:27017/FreelancerDBKE",
+mongoose.connect( "mongodb://localhost:27017/FreelanceDB",
                  { useUnifiedTopology : true, useNewUrlParser: true, useCreateIndex: true },
                 () => console.log(`connected to database status: ${mongoose.connection.readyState}`));
 
@@ -170,7 +170,8 @@ app.post('/api/freelancer-ke/create-member', async (req,res) => {
 
           email: req.body.email,
           name: req.body.fullnames,
-          accountType: req.body.accountType,
+          role: req.body.role,
+          projects:req.body.projects,
           password: hashedPassword
 
         });
@@ -240,6 +241,9 @@ app.post('/api/freelancer-ke/create-project', async (req, res) => {
             title: req.body.title,
             client: req.body.client,
             budget: req.body.budget,
+            targets:req.body.target,
+            targetsMet:req.body.targetsMet,
+            targetsPercentage:req.body.targetsPercentage,
             description: req.body.description
 
         });
@@ -278,6 +282,7 @@ app.post('/api/freelancer-ke/create-task', async (req, res) => {
             duedate: new Date(),
             urgency: req.body.urgency,
             completed: new Date(),
+            completedOnTime: req.body.completedOnTime
 
         });
 
@@ -415,7 +420,7 @@ app.post('/api/freelancer-ke/create-invoice', async (req, res) => {
     console.log(req.body)
 
     try {
-        //New Client Created
+        //New invoice Created
         const invoice = new Invoices({
 
             client: req.body.client,
@@ -426,9 +431,11 @@ app.post('/api/freelancer-ke/create-invoice', async (req, res) => {
 
         });
 
+        console.log(invoice)
+
         const newinvoice = await invoice.save();
 
-        console.log("new" + newinvoince)
+        console.log("new" + newinvoice)
 
         res.status(200).json({
             title: 'created',
@@ -444,6 +451,47 @@ app.post('/api/freelancer-ke/create-invoice', async (req, res) => {
 
 });
 
+// create receipts
+
+app.post('/api/freelancer-ke/create-receipt', async (req, res) => {
+
+    console.log(req.body)
+
+    try {
+        //New invoice Created
+        const receipt = new Receipts({
+
+            client: req.body.client,
+            amount: req.body.amount,
+            description: req.body.description,
+            filePath:req.body.filePath,
+            fileName: req.body.fileName
+
+        });
+
+        const newreceipt = await receipt.save();
+
+        console.log("new" + newreceipt)
+
+        res.status(200).json({
+            title: 'created',
+            newreceipt
+        });
+
+    } catch (err) {
+
+        res.send(err);
+    }
+
+
+
+});
+
+app.post('/api/freelancer-ke/create-receipt', async (req,res) => {
+
+    console.log(req.body)
+
+});
 
 
 console.log(`app is listening on port: ${port}`)

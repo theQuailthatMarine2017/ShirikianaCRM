@@ -5,7 +5,7 @@ const invoicesSchema = new mongoose.Schema({
         type:String
     },
     cost:{
-        type:String
+        type:Number
     },
     project:{
         type:String
@@ -14,8 +14,7 @@ const invoicesSchema = new mongoose.Schema({
         type:String
     },
     fileName: {
-        type:String,
-        required:true
+        type:String
     }
 }, {timestamps: true});
 
