@@ -38,11 +38,11 @@
                     </q-tab-panel>
 
                     <q-tab-panel name="manage_payments">
-                        <q-table :data="data2" title="Payments Pending" row-key="member_name" :columns="columns2" selection="single" :selected.sync="selected"/>
+                        <q-table :data="data2" title="Requested Payments" row-key="member_name" :columns="columns2" selection="single" :selected.sync="selected"/>
 
                             <div :disabled="!selected.length > 0" class="tb-btn">
-                                <q-btn label="Confirm Payment" type="submit" color="blue"/>
-                                <q-btn label="Reject Payment" type="reset" color="red" class="q-ml-sm" />
+                                <q-btn label="Approve" type="submit" color="blue"/>
+                                <q-btn label="Reject" type="reset" color="red" class="q-ml-sm" />
                             </div>
 
                         <q-table :data="data" title="Completed Payments" :columns="columns" />
@@ -61,31 +61,44 @@
 export default {
     data() {
         return {
-            methods:['Bank Transfer', 'Mobile Money'],
+            methods:['Salary - Bank Transfer', 'Salary - Mobile Money','Float - Bank Transfer', 'Float - Mobile Money'],
             payment_type:'',
             selected:[],
             panel:'member_payment',
             columns2:[
 	        { name: 'name', align: 'left', label: 'Member Name', field: 'member_name', sortable: true },
-	        { name: 'project', align: 'left', label: 'Payment Amount', field: 'payment_amount', sortable: true }
+            { name: 'project', align: 'left', label: 'Payment Amount', field: 'payment_amount', sortable: true },
+            { name: 'type', align: 'left', label: 'Payment Type', field: 'payment_type', sortable: true },
+            { name: 'description', align: 'left', label: 'Payment Description', field: 'payment_description', sortable: true }
             ],
             data2:[{
                 member_name:'Member1',
-                payment_amount: 3000
+                payment_amount: 3000,
+                payment_type:'Float - Mobile Money',
+                payment_description:'Budgeted Task'
             }],
             data:[{
          	member_name:'Member1',
-                payment_amount: 3000,
+                payment_amount: 30000,
+                payment_description:'Salary',
+                payment_type:'Salary - Bank Transfer',
+                payment_status: "Approved",
                 date_created:'12/12/20'
          },
          {
          	member_name:'Member2',
                 payment_amount: 6000,
-                date_created:'13/12/20'
+                payment_type:'Float - Mobile Money',
+                payment_status: "Approved",
+                date_created:'13/12/20',
+                payment_description:'Budgeted Task'
          }],
          columns:[
 	       { name: 'name', align: 'left', label: 'Member Name', field: 'member_name', sortable: true },
             { name: 'amount', align: 'left', label: 'Payment Amount', field: 'payment_amount', sortable: true },
+            { name: 'amount', align: 'left', label: 'Payment Status', field: 'payment_status', sortable: true },
+            { name: 'date', align: 'left', label: 'Payment Type', field: 'date_created', sortable: true },
+            { name: 'date', align: 'left', label: 'Payment Description', field: 'date_created', sortable: true },
             { name: 'date', align: 'left', label: 'Payment Date', field: 'date_created', sortable: true }
          ]
         }
