@@ -296,14 +296,16 @@ export default{
 		  colors: ['#ff2323', '#4BB543'],
 		  fill: {
 			  colors: ['#ff2323', '#4BB543']
-			}
+			},
+
 		},
 		chartPieInvoiceOptions: {
 		  labels: ['Pending', 'Paid'],
 		  colors: ['#ff2323', '#4BB543'],
 		  fill: {
 			  colors: ['#ff2323', '#4BB543']
-			}
+			},
+			
 		}
       }
 

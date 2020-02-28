@@ -28,7 +28,8 @@
       		<q-input v-model="desciption" label="Invoice Description *" filled type="textarea" />
 
       <div>
-        <q-btn label="Preview" @click="medium = true" type="submit" glossy color="primary"/>
+        <q-btn label="Preview" class="receipt-buttons" @click="medium = true" type="submit" glossy color="primary"/>
+        <q-btn label="Create"  @click="rec = true" glossy color="secondary"/>
         <q-btn label="Clear" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
     </q-form>
@@ -47,7 +48,8 @@
 		      		<q-input v-model="desciption" label="Receipt Description *" filled type="textarea" />
 
 		      <div>
-		        <q-btn label="Preview"  @click="rec = true" glossy color="primary"/>
+		        <q-btn label="Preview" class="receipt-buttons" @click="rec = true" glossy color="primary"/>
+            <q-btn label="Create"  @click="rec = true" glossy color="secondary"/>
 		        <q-btn label="Clear" type="reset" color="primary" flat class="q-ml-sm" />
 		      </div>
 	   		 </q-form>
@@ -57,7 +59,7 @@
 
         <q-tab-panel name="manage">
 
-        	<q-table :data="data2" title="Pending Invoices" row-key="project_invoiced" :columns="columns2" selection="single" :selected.sync="selected"/>
+        	<q-table :data="data2" title="Pending Invoice Payments" row-key="project_invoiced" :columns="columns2" selection="single" :selected.sync="selected"/>
 
         	<div :disabled="!selected.length > 0" class="tb-btn">
 		        <q-btn label="Paid" type="submit" color="blue"/>
@@ -86,9 +88,6 @@
         >
           <q-card style="width: 700px; max-width: 80vw;">
             <q-card-section>
-              <q-card-actions align="left" class="bg-white text-center">
-              <q-btn color="green" label="Send Proposal" v-close-popup />
-            </q-card-actions>
               <div class="text-h6 text-center">Invoice Preview</div>
             </q-card-section>
 
@@ -96,8 +95,8 @@
               <page size="A4">
 
                 <div class="text-center">
-                <q-avatar size="150px">
-                  <img src="../assets/flooop.png">
+                <q-avatar size="190px">
+                  <img src="../assets/logo.png">
                 </q-avatar>
               </div>
 
@@ -170,17 +169,14 @@
         >
           <q-card style="width: 700px; max-width: 80vw;">
             <q-card-section>
-              <q-card-actions align="left" class="bg-white text-center">
-              <q-btn color="green" label="Send Proposal" v-close-popup />
-            </q-card-actions>
-              <div class="text-h6 text-center">Invoice Preview</div>
+              <div class="text-h6 text-center">Receipt Preview</div>
             </q-card-section>
 
             <q-card-section class="q-pt-none">
               <page size="receipt">
                 <div class="text-center">
                 <q-avatar size="100px">
-                  <img src="../assets/flooop.png">
+                  <img src="../assets/logo.png">
                 </q-avatar>
               </div>
 
@@ -264,7 +260,7 @@ export default {
 
 .invoice-det{
   margin-bottom:15px;
-  background-color:orange;
+  background-color:#042C71;
   color:white;
   padding-left:10px;
   font-weight:bold;
@@ -338,6 +334,10 @@ page[size="A5"][layout="landscape"] {
 
 }
 
+.receipt-buttons{
+  margin-right:15px;
+}
+
 .preview{
   background-color:grey;
 }
@@ -347,7 +347,7 @@ page[size="A5"][layout="landscape"] {
 }
 
 .invoice-header{
-  background-color:orange;
+  background-color:#042C71;
   color:white;
   font-weight:bold;
   padding:5px;
@@ -366,6 +366,22 @@ page[size="A5"][layout="landscape"] {
 .proposal-pd{
   padding:10px;
   line-spacing:0.5px;
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+/* Here you should set what size you want your div to be 
+when viewed on smartphone */
+/* Styles */
+  page[size="A4"]{
+    width:100%;
+  }
+
+  page[size="receipt"]{
+    width:100%;
+  }
+  
 }
 
 </style>

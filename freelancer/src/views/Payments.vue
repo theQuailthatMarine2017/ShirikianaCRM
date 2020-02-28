@@ -5,15 +5,15 @@
                 v-model="panel"
                 inline
                 :options="[
-                { label: 'Create Payments', value: 'member_payment' },
-                { label: 'Manage Payments', value: 'manage_payments' }
+                { label: 'Create Payment Request', value: 'member_payment' },
+                { label: 'Manage Payment Requests', value: 'manage_payments' }
                 ]"
             />
             <div class="create-pd">
                 <q-tab-panels v-model="panel" animated class="shadow-2 rounded-borders">
 
                     <q-tab-panel name="member_payment">
-                        <div class="text-h6">Team Member Payment
+                        <div class="text-h6">Request Payment
                         </div>
 
                         <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
@@ -23,8 +23,6 @@
                             <q-input filled v-model="price" label="Payment Amount *" mask="#.##" fill-mask="0" reverse-fill-mask input-class="text-right" />
 
                             <q-input filled v-model="payment_description" label="Payment Description *"  />
-
-                            <q-input filled v-model="member_to_pay" label="Select Member For Payment *"  />
 
                             
 
@@ -97,8 +95,8 @@ export default {
 	       { name: 'name', align: 'left', label: 'Member Name', field: 'member_name', sortable: true },
             { name: 'amount', align: 'left', label: 'Payment Amount', field: 'payment_amount', sortable: true },
             { name: 'amount', align: 'left', label: 'Payment Status', field: 'payment_status', sortable: true },
-            { name: 'date', align: 'left', label: 'Payment Type', field: 'date_created', sortable: true },
-            { name: 'date', align: 'left', label: 'Payment Description', field: 'date_created', sortable: true },
+            { name: 'date', align: 'left', label: 'Payment Type', field: 'payment_type', sortable: true },
+            { name: 'date', align: 'left', label: 'Payment Description', field: 'payment_description', sortable: true },
             { name: 'date', align: 'left', label: 'Payment Date', field: 'date_created', sortable: true }
          ]
         }

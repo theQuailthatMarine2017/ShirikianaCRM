@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import moment from 'moment'
 import VCalendar from 'v-calendar';
 import VueApexCharts from 'vue-apexcharts'
+
 Vue.use(VueApexCharts)
 
 Vue.component('apexchart', VueApexCharts)

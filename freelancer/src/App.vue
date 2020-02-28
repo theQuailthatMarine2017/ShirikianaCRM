@@ -133,7 +133,7 @@
             <q-icon name="fas fa-money-check-alt" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Team Payments</q-item-label>
+            <q-item-label>Payments</q-item-label>
           </q-item-section>
         </q-item>
       </router-link>

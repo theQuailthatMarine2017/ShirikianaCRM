@@ -487,9 +487,13 @@ app.post('/api/freelancer-ke/create-receipt', async (req, res) => {
 
 });
 
-app.post('/api/freelancer-ke/create-receipt', async (req,res) => {
+// Setting CRM Default Settings using Postman
+
+app.post('/api/freelancer-ke/default-settings', async (req,res) => {
 
     console.log(req.body)
+
+    
 
 });
 
