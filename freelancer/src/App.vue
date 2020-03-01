@@ -100,7 +100,7 @@
             <q-icon name="fas fa-address-card" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Leads</q-item-label>
+            <q-item-label>Business Leads</q-item-label>
           </q-item-section>
         </q-item>
       </router-link>
