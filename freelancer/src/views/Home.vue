@@ -2,201 +2,45 @@
   <div class="home">
     <div class="q-pa-md">
 
-    	<div class="row">
-	      <div class="col table-pd">
-	      	<q-card class="my-card">
-      <q-card-section>
-        <div class="text-h6">Ongoing Projects - 2</div>
-      </q-card-section>
+      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+      <div class="col-12 col-md-6 section">
+        <q-card class="my-card">
+      <q-parallax
+        src="https://cdn.quasar.dev/img/parallax1.jpg"
+        :height="150"
+      />
 
-      <q-markup-table>
-        <thead>
-          <tr>
-            <th class="text-left">Project Name</th>
-            <th class="text-left">Client</th>
-            <th class="text-left">Date Created</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left">Kenya Fruitcake Company</td>
-            <td class="text-left">Jonathan Quail</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-          <tr>
-            <td class="text-left">Rony Quail</td>
-            <td class="text-left">Personal</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-        </tbody>
-      </q-markup-table>
+      <q-card-section>
+        <div class="text-h5 text-weight-bolder">2 Active Projects</div>
+        
+      </q-card-section>
     </q-card>
-	      </div>
-	      </div>
+      </div>
+      <div class="col-12 col-md-6 section">
+        <q-card class="my-card">
+      <q-parallax
+        src="https://ak0.picdn.net/shutterstock/videos/18766430/thumb/1.jpg"
+        :height="150"
+      />
 
-
-	      <div class="row">
-	      <div class="col table-pd"><q-card class="my-card">
       <q-card-section>
-        <div class="text-h6">Ongoing Tasks - 2</div>
+          <div class="text-h5 text-weight-bolder">3 Pending Tasks</div>
       </q-card-section>
-
-      <q-markup-table>
-        <thead>
-          <tr>
-            <th class="text-left">Task</th>
-            <th class="text-left">Project</th>
-            <th class="text-left">Created</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left">Change Jenga Docs html2canvas library</td>
-            <td class="text-left">Jenga-Docs</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-          <tr>
-            <td class="text-left">Finish Order Functions KFC</td>
-            <td class="text-left">Kenya Fruitcake Company</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-        </tbody>
-      </q-markup-table>
-    </q-card></div></div>
-
-    <div class="row">
-	      <div class="col table-pd"><q-card class="my-card">
-      <q-card-section>
-        <div class="text-h6">Pending Invoices - Ksh55,000</div>
-      </q-card-section>
-
-      <q-markup-table>
-        <thead>
-          <tr>
-            <th class="text-left">Project</th>
-            <th class="text-left">Client</th>
-            <th class="text-left">Amount</th>
-            <th class="text-left">Issued On</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left">German Point Online Restuarant</td>
-            <td class="text-left">German Point</td>
-            <td class="text-left">Ksh 55,000</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-        </tbody>
-      </q-markup-table>
-    </q-card></div></div>
-
-    <div class="row">
-	      <div class="col table-pd"><q-card class="my-card">
-      <q-card-section>
-        <div class="text-h6">Paid Invoices - Ksh5,000</div>
-      </q-card-section>
-
-      <q-markup-table>
-        <thead>
-          <tr>
-            <th class="text-left">Project</th>
-            <th class="text-left">Client</th>
-            <th class="text-left">Amount</th>
-            <th class="text-left">Issued On</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left">Jenga-Docs</td>
-            <td class="text-left">Jane Quail</td>
-            <td class="text-left">Ksh 5,000</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-        </tbody>
-      </q-markup-table>
-    </q-card></div></div>
-
-    <div class="row">
-	      <div class="col table-pd"><q-card class="my-card">
-      <q-card-section>
-        <div class="text-h6">Pending Proposals - 1</div>
-      </q-card-section>
-
-      <q-markup-table>
-        <thead>
-          <tr>
-            <th class="text-left">Client Proposal</th>
-            <th class="text-left">Client</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left">Jenga-Docs</td>
-            <td class="text-left">Jane Quail</td>
-          </tr>
-        </tbody>
-      </q-markup-table>
-    </q-card></div></div>
-
-    <div class="row">
-	      <div class="col table-pd"><q-card class="my-card">
-      <q-card-section>
-        <div class="text-h6">Completed Projects - 2</div>
-      </q-card-section>
-
-      <q-markup-table>
-        <thead>
-          <tr>
-            <th class="text-left">Project Title</th>
-            <th class="text-left">Client</th>
-            <th class="text-left">Date Completed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left">Jenga-Docs</td>
-            <td class="text-left">Personal</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-          <tr>
-            <td class="text-left">Rony Quail</td>
-            <td class="text-left">Personal</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-        </tbody>
-      </q-markup-table>
     </q-card>
-</div>
-</div>
+      </div>
+      <div class="col-12 col-md-12 section">
+        <q-card class="my-card">
+      <img height="150" src="https://ak0.picdn.net/shutterstock/videos/18766430/thumb/1.jpg">
 
-<div class="row">
-	      <div class="col table-pd"><q-card class="my-card">
       <q-card-section>
-        <div class="text-h6">Completed Tasks - 2</div>
+        <div class="text-h5 text-weight-bolder">Upcoming Calendar Events</div>
       </q-card-section>
-
-      <q-markup-table>
-        <thead>
-          <tr>
-            <th class="text-left">Task Title</th>
-            <th class="text-left">Date Completed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left">Push Jenga to Github then Heroku</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-          <tr>
-            <td class="text-left">Push Rony Quail to Github then Heroku</td>
-            <td class="text-left">{{ Date().toLocaleString() }}</td>
-          </tr>
-        </tbody>
-      </q-markup-table>
     </q-card>
-</div>
-</div>
+      </div>
+    </div>
 
+    <!-- Columns are always 50% wide, on mobile and desktop -->
     	
 
     </div>
@@ -236,6 +80,19 @@ export default {
 
 .table-pd{
 	padding:5px;
+}
+
+.section{
+	padding:15px;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.justified{
+	text-align:center;
 }
 
 </style>

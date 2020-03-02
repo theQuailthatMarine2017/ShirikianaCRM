@@ -35,6 +35,8 @@
       bordered
       content-class="bg-grey-2"
     >
+
+    <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
       <q-list>
 
       <router-link to="/dashboard">
@@ -160,8 +162,18 @@
         </q-item>
       </router-link>
 
-
+      
       </q-list>
+</q-scroll-area>
+
+      <q-img class="absolute-top" src="https://thumbs.dreamstime.com/t/material-design-background-modern-creative-horisontal-colorful-65738690.jpg" style="height: 150px">
+          <div class="absolute-bottom bg-transparent">
+            <q-avatar size="76px" class="q-mb-sm">
+              <img src="https://i.ya-webdesign.com/images/avatar-png-1.png">
+            </q-avatar>
+            <div class="text-weight-bold">Razvan Stoenescu</div>
+          </div>
+        </q-img>
     </q-drawer>
 
 
