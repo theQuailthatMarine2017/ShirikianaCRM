@@ -1,16 +1,15 @@
 <template>
   <div class="home">
     <div class="q-pa-md">
+      
+      <!-- If User Logged In is Regular Member Account -->
 
-      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+
+
+      <!-- If User Logged In is Regular Member Account -->
     <div class="row">
       <div class="col-12 col-md-6 section">
         <q-card class="my-card">
-      <q-parallax
-        src="https://cdn.quasar.dev/img/parallax1.jpg"
-        :height="150"
-      />
-
       <q-card-section>
         <div class="text-h5 text-weight-bolder">2 Active Projects</div>
         
@@ -19,11 +18,6 @@
       </div>
       <div class="col-12 col-md-6 section">
         <q-card class="my-card">
-      <q-parallax
-        src="https://ak0.picdn.net/shutterstock/videos/18766430/thumb/1.jpg"
-        :height="150"
-      />
-
       <q-card-section>
           <div class="text-h5 text-weight-bolder">3 Pending Tasks</div>
       </q-card-section>
@@ -31,7 +25,6 @@
       </div>
       <div class="col-12 col-md-12 section">
         <q-card class="my-card">
-      <img height="150" src="https://ak0.picdn.net/shutterstock/videos/18766430/thumb/1.jpg">
 
       <q-card-section>
         <div class="text-h5 text-weight-bolder">Upcoming Calendar Events</div>
@@ -40,7 +33,10 @@
       </div>
     </div>
 
-    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <!-- if User Logged in is Team Leader -->
+
+
+    <!-- if User Logged in is Accounts -->
     	
 
     </div>
