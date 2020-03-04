@@ -171,7 +171,7 @@
             <q-avatar size="76px" class="q-mb-sm">
               <img src="https://i.ya-webdesign.com/images/avatar-png-1.png">
             </q-avatar>
-            <div class="text-weight-bold">Razvan Stoenescu</div>
+            <div class="text-weight-bold">Manage Better. Grow Faster</div>
           </div>
         </q-img>
     </q-drawer>
