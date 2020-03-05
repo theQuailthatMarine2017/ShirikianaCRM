@@ -2,22 +2,23 @@
   <div class="home">
     <div class="q-pa-md">
 
-      <!-- If User Logged In is as Super Admin(Owner/CEOirector/BusinessManagers) Account -->
+      <!-- If User Logged In is as Super Admin Account (Owner/CEO /Director /Manager) -->
       <div>super admin</div>
 <div class="row">
       <div class="col-12 col-md-6 section">
-        <q-card flat bordered class="my-card">
+        <q-card 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)" flat bordered class="my-card text-white">
           <q-card-section>
           <div class="text-h6">Your Recent Projects</div>
           </q-card-section>
-            <q-separator inset />
+            <q-separator color="white" inset />
 
       <q-card-section>
         <q-list>
           <q-item>
             <q-item-section avatar>
           <q-avatar>
-            <q-icon color="primary" name="fas fa-project-diagram" />
+            <q-icon color="white" name="fas fa-project-diagram" />
           </q-avatar>
         </q-item-section>
         <q-item-section>
@@ -29,7 +30,7 @@
           <q-item>
             <q-item-section avatar>
           <q-avatar>
-            <q-icon color="primary" name="fas fa-project-diagram" />
+            <q-icon color="white" name="fas fa-project-diagram" />
           </q-avatar>
         </q-item-section>
         <q-item-section>
@@ -40,19 +41,20 @@
         
       </q-card-section>
         </q-card>
-      </div><div class="col-12 col-md-6 section">
-        <q-card flat bordered class="my-card">
+      </div>
+      <div class="col-12 col-md-6 section">
+        <q-card style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)" flat bordered class="my-card text-white">
           <q-card-section>
           <div class="text-h6">Recent Tasks Pending</div>
           </q-card-section>
-            <q-separator inset />
+            <q-separator color="white" inset />
 
       <q-card-section>
         <q-list>
           <q-item>
             <q-item-section avatar>
           <q-avatar>
-            <q-icon color="primary" name="fas fa-project-diagram" />
+            <q-icon color="white" name="fas fa-project-diagram" />
           </q-avatar>
         </q-item-section>
         <q-item-section>
@@ -64,7 +66,7 @@
           <q-item>
             <q-item-section avatar>
           <q-avatar>
-            <q-icon color="primary" name="fas fa-project-diagram" />
+            <q-icon color="white" name="fas fa-project-diagram" />
           </q-avatar>
         </q-item-section>
         <q-item-section>
@@ -75,71 +77,80 @@
       </q-card-section>
         </q-card>
       </div>
-      <div class="col-12 col-md-6 section">
-        <q-card flat bordered class="my-card">
+      <div class="col-12 col-md-12 section">
+        <q-card flat bordered class="my-card text-white" style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
           <q-card-section>
-          <div class="text-h6">Online Team Leaders</div>
+          <div class="text-h6">Online Staff</div>
           </q-card-section>
-          <q-separator inset />
+          <q-separator color="white" inset />
           <q-card-section>
-            <q-chip color="green">
+            <q-chip class="text-white" color="green">
               <q-avatar size="32px">
                 <img src="https://cdn.quasar.dev/img/boy-avatar.png">
               </q-avatar>
-              Team Leader 1
+              Supervisor 1
             </q-chip>
-            <q-chip color="green">
+            <q-chip class="text-white" color="green">
               <q-avatar size="32px">
                 <img src="https://cdn.quasar.dev/img/boy-avatar.png">
               </q-avatar>
               Team Leader 2
             </q-chip>
-            <q-chip color="green">
+            <q-chip class="text-white" color="green">
               <q-avatar size="32px">
                 <img src="https://cdn.quasar.dev/img/boy-avatar.png">
               </q-avatar>
               Team Leader 3
             </q-chip>
-            <q-chip color="green">
+            <q-chip class="text-white" color="green">
               <q-avatar size="32px">
                 <img src="https://cdn.quasar.dev/img/boy-avatar.png">
               </q-avatar>
               Team Leader 4
             </q-chip>
+            <q-chip class="text-white" color="green">
+              <q-avatar size="32px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+              Staff 1
+            </q-chip>
+            <q-chip class="text-white" color="green">
+              <q-avatar size="32px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+              Staff 2
+            </q-chip>
           </q-card-section>
-        </q-card>
-      </div>
-      <div class="col-12 col-md-6 section">
-        <q-card flat bordered class="my-card">
-          <q-card-section>
-          <div class="text-h6">Online Team Members</div>
-          </q-card-section>
-          <q-separator inset />
         </q-card>
       </div>
 
       <div class="col-12 col-md-6 section">
-        <q-card flat bordered class="my-card">
+        <q-card flat bordered class="my-card text-white" style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
           <q-card-section>
           <div class="text-h6">Pending Payments</div>
           </q-card-section>
+          <q-seperator color="white" inset />
+
+          
         </q-card>
       </div>
 <div class="col-12 col-md-6 section">
-        <q-card flat bordered class="my-card">
+        <q-card flat bordered class="my-card text-white" style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
           <q-card-section>
-          <div class="text-h6">Business Lead</div>
+          <div class="text-h6">Business Leads</div>
           </q-card-section>
+
+          <q-seperator color="white" inset />
         </q-card>
       </div>
 
       <div class="col-12 col-md-12 section">
-        <q-card flat bordered class="my-card">
+        <q-card flat bordered class="my-card text-white" style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
       <q-card-section>
         <div class="text-h6">Your Messages</div>
       </q-card-section>
 
-      <q-separator inset />
+      <q-separator color="white" inset />
 
       <q-card-section>
         <q-list class="rounded-borders">
@@ -153,14 +164,14 @@
 
         <q-item-section>
           <q-item-label lines="1">Brunch this weekend?</q-item-label>
-          <q-item-label caption lines="2">
-            <span class="text-weight-bold">Janet</span>
+          <q-item-label class="text-white" caption lines="2">
+            <span class="text-weight-bold text-white">Janet</span>
             -- I'll be in your neighborhood doing errands this
             weekend. Do you want to grab brunch?
           </q-item-label>
         </q-item-section>
 
-        <q-item-section side top>
+        <q-item-section class="text-white" side top>
           1 min ago
         </q-item-section>
       </q-item>
@@ -174,13 +185,13 @@
 
         <q-item-section>
           <q-item-label lines="1">Linear Project</q-item-label>
-          <q-item-label caption lines="2">
-            <span class="text-weight-bold">John</span>
+          <q-item-label class="text-white" caption lines="2">
+            <span class="text-weight-bold text-white">John</span>
             -- Can we schedule a call for tomorrow?
           </q-item-label>
         </q-item-section>
 
-        <q-item-section side top>
+        <q-item-section class="text-white" side top>
           1 min ago
         </q-item-section>
       </q-item>
@@ -192,26 +203,26 @@
       </div>
 
       <div class="col-12 col-md-12 section">
-        <q-card flat bordered class=" my-card">
+        <q-card flat bordered class=" my-card text-white" style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
       <q-card-section>
         <div class="text-h6">Upcoming Calendar Events</div>
       </q-card-section>
-      <q-separator inset />
+      <q-separator color="white" inset />
       <q-card-section>
         <q-item clickable v-ripple>
         <q-item-section avatar>
           <q-avatar>
-            <q-icon color="primary" name="fas fa-calendar-day" />
+            <q-icon color="white" name="fas fa-calendar-day" />
           </q-avatar>
         </q-item-section>
 
         <q-item-section>
           <q-item-label lines="1">Meeting with Business Lead</q-item-label>
           <q-item-label caption lines="2">
-            <span class="text-weight-bold">Starts on 12 Feb 2020</span>
+            <span class="text-weight-bold text-white">Starts on 12 Feb 2020</span>
           </q-item-label>
         </q-item-section>
-        <q-item-section side top>
+        <q-item-section class="text-white" side top>
           Very Urgent
         </q-item-section>
       </q-item>
@@ -225,24 +236,25 @@
 
 </div>
 
-<div>regular scetion</div>
+<div>Regular Account</div>
       <!-- If User Logged In is Regular Member Account -->
     <div class="row">
       <div class="col-12 col-md-6 section">
 
-        <q-card flat bordered class="my-card">
+        <q-card flat bordered class="my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
       <q-card-section>
         <div class="text-h6">Your Recent Projects</div>
       </q-card-section>
 
-      <q-separator inset />
+      <q-separator color="white" inset />
 
       <q-card-section>
         <q-list>
           <q-item>
             <q-item-section avatar>
           <q-avatar>
-            <q-icon color="primary" name="fas fa-project-diagram" />
+            <q-icon color="white" name="fas fa-project-diagram" />
           </q-avatar>
         </q-item-section>
         <q-item-section>
@@ -254,7 +266,7 @@
           <q-item>
             <q-item-section avatar>
           <q-avatar>
-            <q-icon color="primary" name="fas fa-project-diagram" />
+            <q-icon color="white" name="fas fa-project-diagram" />
           </q-avatar>
         </q-item-section>
         <q-item-section>
@@ -270,19 +282,20 @@
 
       <div class="col-12 col-md-6 section">
        
-       <q-card flat bordered class="my-card">
+       <q-card flat bordered class="my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
       <q-card-section>
         <div class="text-h6">Your Recent Tasks</div>
       </q-card-section>
 
-      <q-separator inset />
+      <q-separator color="white" inset />
 
       <q-card-section>
         <q-list>
           <q-item>
             <q-item-section avatar>
           <q-avatar>
-           <q-icon color="primary" name="fas fa-tasks" />
+           <q-icon color="white" name="fas fa-tasks" />
           </q-avatar>
         </q-item-section>
         <q-item-section>
@@ -294,7 +307,7 @@
           <q-item>
             <q-item-section avatar>
           <q-avatar>
-            <q-icon color="primary" name="fas fa-tasks" />
+            <q-icon color="white" name="fas fa-tasks" />
           </q-avatar>
         </q-item-section>
         <q-item-section>
@@ -308,12 +321,13 @@
 
 
       <div class="col-12 col-md-12 section">
-        <q-card flat bordered class="my-card">
+        <q-card flat bordered class="my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
       <q-card-section>
         <div class="text-h6">Your Messages</div>
       </q-card-section>
 
-      <q-separator inset />
+      <q-separator color="white" inset />
 
       <q-card-section>
         <q-list class="rounded-borders">
@@ -326,15 +340,15 @@
         </q-item-section>
 
         <q-item-section>
-          <q-item-label lines="1">Brunch this weekend?</q-item-label>
-          <q-item-label caption lines="2">
-            <span class="text-weight-bold">Janet</span>
+          <q-item-label class="text-white" lines="1">Brunch this weekend?</q-item-label>
+          <q-item-label class="text-white" caption lines="2">
+            <span class="text-weight-bold text-white">Janet</span>
             -- I'll be in your neighborhood doing errands this
             weekend. Do you want to grab brunch?
           </q-item-label>
         </q-item-section>
 
-        <q-item-section side top>
+        <q-item-section class="text-white" side top>
           1 min ago
         </q-item-section>
       </q-item>
@@ -347,14 +361,14 @@
         </q-item-section>
 
         <q-item-section>
-          <q-item-label lines="1">Linear Project</q-item-label>
-          <q-item-label caption lines="2">
+          <q-item-label class="text-white" lines="1">Linear Project</q-item-label>
+          <q-item-label class="text-white" caption lines="2">
             <span class="text-weight-bold">John</span>
             -- Can we schedule a call for tomorrow?
           </q-item-label>
         </q-item-section>
 
-        <q-item-section side top>
+        <q-item-section class="text-white" side top>
           1 min ago
         </q-item-section>
       </q-item>
@@ -366,26 +380,27 @@
       </div>
 
       <div class="col-12 col-md-12 section">
-        <q-card flat bordered class=" my-card">
+        <q-card flat bordered class=" my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
       <q-card-section>
         <div class="text-h6">Upcoming Calendar Events</div>
       </q-card-section>
-      <q-separator inset />
+      <q-separator color="white" inset />
       <q-card-section>
         <q-item clickable v-ripple>
         <q-item-section avatar>
           <q-avatar>
-            <q-icon color="primary" name="fas fa-calendar-day" />
+            <q-icon color="white" name="fas fa-calendar-day" />
           </q-avatar>
         </q-item-section>
 
         <q-item-section>
-          <q-item-label lines="1">Meeting with Business Lead</q-item-label>
+          <q-item-label class="text-white" lines="1">Meeting with Business Lead</q-item-label>
           <q-item-label caption lines="2">
-            <span class="text-weight-bold">Starts on 12 Feb 2020</span>
+            <span class="text-weight-bold text-white">Starts on 12 Feb 2020</span>
           </q-item-label>
         </q-item-section>
-        <q-item-section side top>
+        <q-item-section class="text-white" side top>
           Very Urgent
         </q-item-section>
       </q-item>
@@ -398,14 +413,365 @@
 
     </div>
 
-    <!-- if User Logged in is Team Leader -->
-
-
-
-
+<div>Accounts Account</div>
     <!-- if User Logged in is Accounts -->
-    	
+<div class="row">
 
+      <div class="col-12 col-md-6 section">
+        <q-card flat bordered class="my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
+      <q-card-section>
+        <div class="text-h6">Recent Payments</div>
+      </q-card-section>
+
+      <q-separator color="white" inset />
+
+      <q-card-section>
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-file-invoice-dollar" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Client 1</q-item-label>
+        </q-item-section>
+      </q-item>
+        </q-list>
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-file-invoice-dollar" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Client 1</q-item-label>
+        </q-item-section>
+      </q-item>
+        </q-list>
+      </q-card-section>
+    </q-card>
+      </div>
+
+      <div class="col-12 col-md-6 section">
+        <q-card style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)" flat bordered class="my-card text-white">
+          <q-card-section>
+          <div class="text-h6">Pending Payments</div>
+          </q-card-section>
+            <q-separator color="white" inset />
+
+      <q-card-section>
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-file-invoice-dollar" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Client 3</q-item-label>
+        </q-item-section>
+      </q-item>
+        </q-list>
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-file-invoice-dollar" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Client 2</q-item-label>
+        </q-item-section>
+      </q-item>
+        </q-list>
+      </q-card-section>
+        </q-card>
+      </div>
+
+
+<div class="col-12 col-md-12 section">
+
+  <q-card flat bordered class=" my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
+      <q-card-section>
+        <div class="text-h6">Payment Requests</div>
+      </q-card-section>
+      <q-separator color="white" inset />
+      <q-card-section>
+
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-file-invoice-dollar" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label class="text-white" lines="1">Salary Payment</q-item-label>
+        </q-item-section>
+        <q-item-section class="text-white" side top>
+          Bank Transfer - Salary
+        </q-item-section>
+      </q-item>
+        </q-list>
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-file-invoice-dollar" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label class="text-white" lines="1">Float Request For Task</q-item-label>
+        </q-item-section>
+        <q-item-section class="text-white" side top>
+          Mobile Money - Float
+        </q-item-section>
+      </q-item>
+        </q-list>
+
+      </q-card-section>
+
+  </q-card>
+
+</div>
+
+<div class="col-12 col-md-12 section">
+        <q-card flat bordered class="my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
+      <q-card-section>
+        <div class="text-h6">Your Messages</div>
+      </q-card-section>
+
+      <q-separator color="white" inset />
+
+      <q-card-section>
+        <q-list class="rounded-borders">
+
+      <q-item clickable v-ripple>
+        <q-item-section avatar>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/img/avatar2.jpg">
+          </q-avatar>
+        </q-item-section>
+
+        <q-item-section>
+          <q-item-label class="text-white" lines="1">Brunch this weekend?</q-item-label>
+          <q-item-label class="text-white" caption lines="2">
+            <span class="text-weight-bold text-white">Janet</span>
+            -- I'll be in your neighborhood doing errands this
+            weekend. Do you want to grab brunch?
+          </q-item-label>
+        </q-item-section>
+
+        <q-item-section class="text-white" side top>
+          1 min ago
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple>
+        <q-item-section avatar>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/img/avatar4.jpg">
+          </q-avatar>
+        </q-item-section>
+
+        <q-item-section>
+          <q-item-label class="text-white" lines="1">Linear Project</q-item-label>
+          <q-item-label class="text-white" caption lines="2">
+            <span class="text-weight-bold">John</span>
+            -- Can we schedule a call for tomorrow?
+          </q-item-label>
+        </q-item-section>
+
+        <q-item-section class="text-white" side top>
+          1 min ago
+        </q-item-section>
+      </q-item>
+
+
+    </q-list>
+      </q-card-section>
+    </q-card>
+      </div>
+
+      <div class="col-12 col-md-12 section">
+        <q-card flat bordered class=" my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
+      <q-card-section>
+        <div class="text-h6">Upcoming Calendar Events</div>
+      </q-card-section>
+      <q-separator color="white" inset />
+      <q-card-section>
+        <q-item clickable v-ripple>
+        <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-calendar-day" />
+          </q-avatar>
+        </q-item-section>
+
+        <q-item-section>
+          <q-item-label class="text-white" lines="1">Meeting with Business Lead</q-item-label>
+          <q-item-label caption lines="2">
+            <span class="text-weight-bold text-white">Starts on 12 Feb 2020</span>
+          </q-item-label>
+        </q-item-section>
+        <q-item-section class="text-white" side top>
+          Very Urgent
+        </q-item-section>
+        
+      </q-item>
+
+      </q-card-section>
+
+        </q-card>
+      </div>
+
+
+
+</div>
+
+
+
+
+    <!-- if User Logged in is Supervisor -->
+    	<div>Supervisor Account</div>
+      <div class="row">
+        <div class="col-12 col-md-6 section">
+
+        <q-card flat bordered class="my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
+      <q-card-section>
+        <div class="text-h6">Your Recent Projects</div>
+      </q-card-section>
+
+      <q-separator color="white" inset />
+
+      <q-card-section>
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-project-diagram" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Project 1</q-item-label>
+        </q-item-section>
+      </q-item>
+        </q-list>
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-project-diagram" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Project 2</q-item-label>
+        </q-item-section>
+      </q-item>
+        </q-list>
+      </q-card-section>
+    </q-card>
+
+      </div>
+
+
+      <div class="col-12 col-md-6 section">
+       
+       <q-card flat bordered class="my-card text-white" 
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
+      <q-card-section>
+        <div class="text-h6">Recent Tasks</div>
+      </q-card-section>
+
+      <q-separator color="white" inset />
+
+      <q-card-section>
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+           <q-icon color="white" name="fas fa-tasks" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Task 1</q-item-label>
+        </q-item-section>
+      </q-item>
+        </q-list>
+        <q-list>
+          <q-item>
+            <q-item-section avatar>
+          <q-avatar>
+            <q-icon color="white" name="fas fa-tasks" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Task 2</q-item-label>
+        </q-item-section>
+      </q-item>
+        </q-list>
+      </q-card-section>
+    </q-card>
+      </div>
+
+      <div class="col-12 col-md-12 section">
+        <q-card flat bordered class="my-card text-white" style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
+          <q-card-section>
+          <div class="text-h6">Online Staff</div>
+          </q-card-section>
+          <q-separator color="white" inset />
+          <q-card-section>
+            <q-chip class="text-white" color="green">
+              <q-avatar size="32px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+              Supervisor 1
+            </q-chip>
+            <q-chip class="text-white" color="green">
+              <q-avatar size="32px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+              Team Leader 2
+            </q-chip>
+            <q-chip class="text-white" color="green">
+              <q-avatar size="32px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+              Team Leader 3
+            </q-chip>
+            <q-chip class="text-white" color="green">
+              <q-avatar size="32px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+              Team Leader 4
+            </q-chip>
+            <q-chip class="text-white" color="green">
+              <q-avatar size="32px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+              Staff 1
+            </q-chip>
+            <q-chip class="text-white" color="green">
+              <q-avatar size="32px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              </q-avatar>
+              Staff 2
+            </q-chip>
+          </q-card-section>
+        </q-card>
+      </div>
+
+      </div>
+
+      <!-- If User Logged In is Human Resource Account -->
+      <div>Human Resources Account</div>
+      
     </div>
 
 
