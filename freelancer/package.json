@@ -21,7 +21,7 @@
     "@syncfusion/ej2-vue-charts": "*",
     "@syncfusion/ej2-vue-grids": "*",
     "apexcharts": "^3.15.5",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "buefy": "^0.8.10",
     "chart.js": "^2.9.3",
     "core-js": "^3.4.4",
