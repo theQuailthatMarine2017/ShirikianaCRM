@@ -20,7 +20,7 @@
     "@quasar/extras": "^1.5.0",
     "@syncfusion/ej2-vue-charts": "*",
     "@syncfusion/ej2-vue-grids": "*",
-    "apexcharts": "^3.15.5",
+    "apexcharts": "^3.24.0",
     "axios": "^0.19.2",
     "buefy": "^0.8.10",
     "chart.js": "^2.9.3",
